@@ -327,18 +327,20 @@
       </form>
 
       <!-- Komentar Ucapan -->
-      <div class="mt-5">
-        <h3>Ucapan & Doa</h3>
-        <form id="comment-form" class="mb-3">
-          <div class="mb-2">
-            <input type="text" id="comment-name" class="form-control" placeholder="Nama Anda" required>
-          </div>
-          <div class="mb-2">
-            <textarea id="comment-message" class="form-control" rows="2" placeholder="Tulis ucapan..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-success btn-sm">Kirim Ucapan</button>
-        </form>
-        <ul id="comment-list" class="list-group"></ul>
+      <div class="mt-5 d-flex justify-content-center">
+        <div class="comment-box w-100" style="max-width: 500px;">
+          <h3>Ucapan & Doa</h3>
+          <form id="comment-form" class="mb-3">
+            <div class="mb-2">
+              <input type="text" id="comment-name" class="form-control" placeholder="Nama Anda" required>
+            </div>
+            <div class="mb-2">
+              <textarea id="comment-message" class="form-control" rows="2" placeholder="Tulis ucapan..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success btn-sm">Kirim Ucapan</button>
+          </form>
+          <ul id="comment-list" class="list-group"></ul>
+        </div>
       </div>
   </section>
   <section id="gifts" class="gifts">

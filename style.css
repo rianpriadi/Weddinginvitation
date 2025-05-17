@@ -386,6 +386,11 @@ footer li {
   }
 }
 
+.comment-box {
+  max-width: 500px;
+  width: 100%;
+}
+
 /* Media Query */
 /* Extra large */
 @media (max-width: 1200px) {
@@ -491,5 +496,11 @@ footer li {
 
   .timeline li .timeline-panel::after {
     top: 31px;
+  }
+
+  .comment-box {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
 }

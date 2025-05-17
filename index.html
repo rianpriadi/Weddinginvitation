@@ -325,6 +325,21 @@
           <button class="btn btn-primary">Kirim</button>
         </div>
       </form>
+
+      <!-- Komentar Ucapan -->
+      <div class="mt-5">
+        <h3>Ucapan & Doa</h3>
+        <form id="comment-form" class="mb-3">
+          <div class="mb-2">
+            <input type="text" id="comment-name" class="form-control" placeholder="Nama Anda" required>
+          </div>
+          <div class="mb-2">
+            <textarea id="comment-message" class="form-control" rows="2" placeholder="Tulis ucapan..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-success btn-sm">Kirim Ucapan</button>
+        </form>
+        <ul id="comment-list" class="list-group"></ul>
+      </div>
   </section>
   <section id="gifts" class="gifts">
     <div class="container">
@@ -501,6 +516,24 @@
 
     document.querySelector('#nama').value = nama;
   </script>
+  <script>
+  // Komentar ucapan sederhana (local only)
+  const commentForm = document.getElementById('comment-form');
+  const commentList = document.getElementById('comment-list');
+
+  commentForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const name = document.getElementById('comment-name').value.trim();
+    const message = document.getElementById('comment-message').value.trim();
+    if (name && message) {
+      const li = document.createElement('li');
+      li.className = 'list-group-item';
+      li.innerHTML = `<strong>${name}:</strong> ${message}`;
+      commentList.prepend(li);
+      commentForm.reset();
+    }
+  });
+</script>
 </body>
 
 </html>

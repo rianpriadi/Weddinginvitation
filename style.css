@@ -500,7 +500,11 @@ footer li {
 
   .comment-box {
     max-width: 100%;
-    padding-left: 0;
-    padding-right: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 1.5rem 1rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
   }
 }
